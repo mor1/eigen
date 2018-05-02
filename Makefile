@@ -1,12 +1,6 @@
 all: setup.data
 	ocaml setup.ml -build
 
-configure: setup.data
-setup.data: setup.ml
-	ocaml setup.ml -configure
-setup.ml: _oasis
-	oasis setup
-
 install:
 	ocaml setup.ml -uninstall
 	ocaml setup.ml -install
